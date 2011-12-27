@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using Massive;
 
-namespace VidPub.Web.Model {
+namespace Web.Model {
     public class Customers:DynamicModel {
-        public Customers():base("VidPub","Customers","ID","Email") {
+        public Customers():base("AppConnection","Customers","ID","Email") {
 
         }
 

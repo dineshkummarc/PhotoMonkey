@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using VidPub.Web.Model;
-using VidPub.Web.Infrastructure;
-using VidPub.Web.Controllers;
+using Web.Model;
+using Web.Infrastructure;
+using Web.Controllers;
 using Massive;
 using System.IO;
 using System.Web.Script.Serialization;
 using System.Dynamic;
-namespace VidPub.Web.Areas.Api.Controllers{
+namespace Web.Areas.Api.Controllers{
     public class ProductionsController : ApplicationController {
 
         DynamicModel _productions;

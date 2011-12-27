@@ -7,10 +7,10 @@ using Massive;
 using System.Data.SqlServerCe;
 using System.Security.Cryptography;
 
-namespace VidPub.Web.Model {
+namespace Web.Model {
     public class Users:DynamicModel {
 
-        public Users():base("VidPub", "Users", "ID","Email") {}
+        public Users() : base("AppConnection", "Users", "ID", "Email") { }
 
         public dynamic Register(string email, string password, string confirm) {
             dynamic result = new ExpandoObject();

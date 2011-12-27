@@ -1,50 +1,35 @@
-body
+﻿#logo
 {
-    font-size: .85em;
-    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
+    background-color:#2d2d2d;
+    height:65px;
+    padding-left:52px;
 }
 
-header,
-footer,
-nav,
-section {
-    display: block;
-}
-
-/* Styles for basic forms
------------------------------------------------------------*/
-
-fieldset 
+#logo img
 {
-    border:1px solid #ddd;
-    padding:0 1.4em 1.4em 1.4em;
-    margin:0 0 1.5em 0;
+    padding-top:12px
 }
 
-legend 
+#splash
 {
-    font-size:1.2em;
-    font-weight: bold;
+    margin-bottom:32px;
+    background-color:#4d4d4d;
+    border-top:#ccc;
+    padding-top:24px;
+    height:360px;
 }
-
-textarea 
+.emphasis
 {
-    min-height: 75px;
+    font-size:1.8em;
+    font-family:"helvetica neue", "helvetica";
 }
 
-.editor-label 
+label
 {
-    margin: 1em 0 0 0;
+    display:block;
+    font-style:italic;
+    font-weight:bold;
 }
-
-.editor-field 
-{
-    margin:0.5em 0 0 0;
-}
-
-
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 .field-validation-error
@@ -59,7 +44,7 @@ textarea
 
 .input-validation-error
 {
-    border: 1px solid #ff0000;
+    border: 1px solid red;
     background-color: #ffeeee;
 }
 
@@ -72,4 +57,10 @@ textarea
 .validation-summary-valid
 {
     display: none;
+}
+
+#notifier
+{
+    margin-top:24px;
+    margin-bottom: 24px;
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Massive;
 
-namespace VidPub.Web.Model {
+namespace Web.Model {
     public class Orders:DynamicModel {
         public Orders():base("Vidpub","Orders","ID","OrderNumber") {
 

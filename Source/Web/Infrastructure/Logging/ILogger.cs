@@ -1,5 +1,5 @@
 ﻿using System;
-namespace VidPub.Web.Infrastructure.Logging {
+namespace Web.Infrastructure.Logging {
     public interface ILogger {
         void LogDebug(string message);
         void LogError(Exception x);

@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace VidPub.Web.Models {
+namespace Web.Models {
 
     public class ChangePasswordModel {
         [Required]

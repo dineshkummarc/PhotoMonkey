@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using Massive;
 
-namespace VidPub.Web.Model {
+namespace Web.Model {
     public class Productions:DynamicModel {
-        public Productions():base("VidPub","Productions","ID") {
+        public Productions()
+            : base("AppConnection", "Productions", "ID")
+        {
 
         }
         public dynamic FuzzySearch(string query) {

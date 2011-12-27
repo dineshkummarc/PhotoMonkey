@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using VidPub.Web.Model;
-using VidPub.Web.Infrastructure;
-using VidPub.Web.Controllers;
-using VidPub.Web.Infrastructure.Logging;
+using Web.Model;
+using Web.Infrastructure;
+using Web.Controllers;
+using Web.Infrastructure.Logging;
 using System.Web.Script.Serialization;
-namespace VidPub.Web.Areas.api.Controllers{
+namespace Web.Areas.api.Controllers{
     public class ShopifyController : ApplicationController {
         Orders _orders;
         public ShopifyController(ITokenHandler tokenStore, ILogger logger):base(tokenStore,logger) {
@@ -17,7 +17,7 @@ namespace VidPub.Web.Areas.api.Controllers{
 
         //need to have an action for Shopify pings
         public ActionResult Receiver() {
-            var order = this.SqueezeJSON();
+            var order = this.SqueezeJson();
             Logger.LogInfo(order.order_number.ToString());
             return Content("OK");
         }

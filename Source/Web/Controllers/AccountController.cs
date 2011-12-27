@@ -5,11 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
-using VidPub.Web.Models;
-using VidPub.Web.Model;
-using VidPub.Web.Infrastructure;
+using Web.Models;
+using Web.Model;
+using Web.Infrastructure;
 
-namespace VidPub.Web.Controllers {
+namespace Web.Controllers {
     public class AccountController : ApplicationController {
         Users _users;
         public AccountController():this(new FormsAuthTokenStore()) {}

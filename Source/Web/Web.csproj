@@ -88,8 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectMVC3.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\ElmahController.cs" />
     <Compile Include="Areas\api\apiAreaRegistration.cs" />
     <Compile Include="Areas\api\Controllers\EpisodesController.cs" />
     <Compile Include="Areas\api\Controllers\ProductionsController.cs" />
@@ -128,7 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HTMLPage1.htm" />
-    <Content Include="JScript1.js" />
     <Content Include="Public\images\agenda.png" />
     <Content Include="Public\images\camera.png" />
     <Content Include="Public\images\close.png" />
@@ -147,38 +144,62 @@
     <Content Include="Public\images\jquery_ui\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Public\images\lead.png" />
     <Content Include="Public\images\logo.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Public\stylesheets\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.all.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.base.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.button.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.core.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.slider.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Public\stylesheets\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
-    <Content Include="Public\stylesheets\Site.css" />
     <Content Include="Public\javascripts\jquery.validate.min.js" />
     <Content Include="Public\javascripts\modernizr-1.7.js" />
     <Content Include="Public\javascripts\modernizr-1.7.min.js" />
+    <Content Include="Public\stylesheets\forms.css" />
+    <Content Include="Public\stylesheets\ie.css" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.accordion.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.all.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.autocomplete.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.base.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.button.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.core.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.datepicker.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.dialog.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.progressbar.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.resizable.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.selectable.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.slider.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.tabs.css" />
+    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.theme.css" />
+    <Content Include="Public\stylesheets\plugins\buttons\icons\cross.png" />
+    <Content Include="Public\stylesheets\plugins\buttons\icons\key.png" />
+    <Content Include="Public\stylesheets\plugins\buttons\icons\tick.png" />
+    <Content Include="Public\stylesheets\plugins\buttons\readme.txt" />
+    <Content Include="Public\stylesheets\plugins\buttons\screen.css" />
+    <Content Include="Public\stylesheets\plugins\fancy-type\readme.txt" />
+    <Content Include="Public\stylesheets\plugins\fancy-type\screen.css" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\doc.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\email.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\external.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\feed.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\im.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\lock.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\pdf.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\visited.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\icons\xls.png" />
+    <Content Include="Public\stylesheets\plugins\link-icons\readme.txt" />
+    <Content Include="Public\stylesheets\plugins\link-icons\screen.css" />
+    <Content Include="Public\stylesheets\plugins\rtl\readme.txt" />
+    <Content Include="Public\stylesheets\plugins\rtl\screen.css" />
+    <Content Include="Public\stylesheets\print.css" />
+    <Content Include="Public\stylesheets\screen.css" />
+    <Content Include="Public\stylesheets\Site.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -208,19 +229,6 @@
     <Content Include="Areas\Reporting\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CodeTemplates\AddController\Controller.tt" />
-    <None Include="CodeTemplates\AddView\AspxCSharp\Create.tt" />
-    <None Include="CodeTemplates\AddView\AspxCSharp\Delete.tt" />
-    <None Include="CodeTemplates\AddView\AspxCSharp\Details.tt" />
-    <None Include="CodeTemplates\AddView\AspxCSharp\Edit.tt" />
-    <None Include="CodeTemplates\AddView\AspxCSharp\Empty.tt" />
-    <None Include="CodeTemplates\AddView\AspxCSharp\List.tt" />
-    <None Include="CodeTemplates\AddView\CSHTML\Create.tt" />
-    <None Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
-    <None Include="CodeTemplates\AddView\CSHTML\Details.tt" />
-    <None Include="CodeTemplates\AddView\CSHTML\Edit.tt" />
-    <None Include="CodeTemplates\AddView\CSHTML\Empty.tt" />
-    <None Include="CodeTemplates\AddView\CSHTML\List.tt" />
     <Content Include="Views\Account\ChangePassword.cshtml" />
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Account\LogOn.cshtml" />
@@ -239,6 +247,13 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Assets.cshtml" />
+    <Content Include="App_Code\Form.cshtml" />
+    <Content Include="App_Code\Template.cshtml" />
+    <Content Include="App_Code\Templates.cshtml" />
+    <Content Include="App_Code\URL.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

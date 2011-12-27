@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Massive;
-using VidPub.Web.Model;
-using VidPub.Web.Infrastructure;
+using Web.Model;
+using Web.Infrastructure;
 
-namespace VidPub.Web.Controllers {
+namespace Web.Controllers {
     public class ProductionsController : CruddyController {
         public ProductionsController(ITokenHandler tokenStore):base(tokenStore) {
             _table = new Productions();

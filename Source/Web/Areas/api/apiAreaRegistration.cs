@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace VidPub.Web.Areas.Api {
+namespace Web.Areas.Api {
     public class ApiAreaRegistration : AreaRegistration {
         public override string AreaName {
             get {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.Mvc;
 
-namespace VidPub.Web.Infrastructure {
+namespace Web.Infrastructure {
 
     public class FormsAuthTokenStore : ITokenHandler {
 

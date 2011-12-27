@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace VidPub.Web.Areas.Reporting {
+namespace Web.Areas.Reporting {
     public class ReportingAreaRegistration : AreaRegistration {
         public override string AreaName {
             get {
