@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7D75E14D-8A52-4F33-B998-704BA4CFFE2A}</ProjectGuid>
+    <ProjectGuid>{689528C5-0A48-4283-8BAE-E34930130558}</ProjectGuid>
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -34,36 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Elmah.Contrib.Mvc">
-      <HintPath>..\packages\Elmah.Contrib.Mvc.1.0\lib\net40\Elmah.Contrib.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Mvc">
-      <HintPath>..\packages\Ninject.MVC3.2.2.2.0\lib\net40-Full\Ninject.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog">
-      <HintPath>..\packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog.Extended">
-      <HintPath>..\packages\NLog.Extended.2.0.0.2000\lib\net40-full\NLog.Extended.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SqlServerCe.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -82,124 +60,54 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="WebActivator">
-      <HintPath>..\packages\WebActivator.1.4.4\lib\net40\WebActivator.dll</HintPath>
-    </Reference>
+    <Reference Include="System.DirectoryServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\NinjectMVC3.cs" />
-    <Compile Include="Areas\api\apiAreaRegistration.cs" />
-    <Compile Include="Areas\api\Controllers\EpisodesController.cs" />
-    <Compile Include="Areas\api\Controllers\ProductionsController.cs" />
-    <Compile Include="Areas\api\Controllers\ShopifyController.cs" />
-    <Compile Include="Areas\Reporting\Controllers\AnnualController.cs" />
-    <Compile Include="Areas\Reporting\ReportingAreaRegistration.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ApplicationController.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
-    <Compile Include="Controllers\EpisodesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductionsController.cs" />
-    <Compile Include="Controllers\ShopifyController.cs" />
-    <Compile Include="Controllers\VidpubController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\CruddyController.cs" />
-    <Compile Include="Infrastructure\CSVResult.cs" />
-    <Compile Include="Infrastructure\ExpandoObjectConverter.cs" />
-    <Compile Include="Infrastructure\FormsAuthTokenStore.cs" />
-    <Compile Include="Infrastructure\Logging\ILogger.cs" />
-    <Compile Include="Infrastructure\Logging\NLogger.cs" />
-    <Compile Include="Infrastructure\Massive.cs" />
-    <Compile Include="Infrastructure\RequireAdminAttribute.cs" />
-    <Compile Include="Infrastructure\RouteHelper.cs" />
-    <Compile Include="Model\AccountModel.cs" />
-    <Compile Include="Model\Channels.cs" />
-    <Compile Include="Model\Customers.cs" />
-    <Compile Include="Model\Episodes.cs" />
-    <Compile Include="Model\Orders.cs" />
-    <Compile Include="Model\Productions.cs" />
-    <Compile Include="Model\Users.cs" />
-    <Compile Include="Model\VideoLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HTMLPage1.htm" />
-    <Content Include="Public\images\agenda.png" />
-    <Content Include="Public\images\camera.png" />
-    <Content Include="Public\images\close.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Public\images\jquery_ui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Public\images\jquery_ui\ui-icons_222222_256x240.png" />
-    <Content Include="Public\images\jquery_ui\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Public\images\jquery_ui\ui-icons_454545_256x240.png" />
-    <Content Include="Public\images\jquery_ui\ui-icons_888888_256x240.png" />
-    <Content Include="Public\images\jquery_ui\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Public\images\lead.png" />
-    <Content Include="Public\images\logo.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
-    <Content Include="Public\javascripts\jquery.validate.min.js" />
-    <Content Include="Public\javascripts\modernizr-1.7.js" />
-    <Content Include="Public\javascripts\modernizr-1.7.min.js" />
-    <Content Include="Public\stylesheets\forms.css" />
-    <Content Include="Public\stylesheets\ie.css" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_222222_256x240.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_454545_256x240.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_888888_256x240.png" />
-    <Content Include="Public\stylesheets\jquery_ui\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.accordion.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.all.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.autocomplete.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.base.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.button.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.core.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.datepicker.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.dialog.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.progressbar.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.resizable.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.selectable.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.slider.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.tabs.css" />
-    <Content Include="Public\stylesheets\jquery_ui\jquery.ui.theme.css" />
-    <Content Include="Public\stylesheets\plugins\buttons\icons\cross.png" />
-    <Content Include="Public\stylesheets\plugins\buttons\icons\key.png" />
-    <Content Include="Public\stylesheets\plugins\buttons\icons\tick.png" />
-    <Content Include="Public\stylesheets\plugins\buttons\readme.txt" />
-    <Content Include="Public\stylesheets\plugins\buttons\screen.css" />
-    <Content Include="Public\stylesheets\plugins\fancy-type\readme.txt" />
-    <Content Include="Public\stylesheets\plugins\fancy-type\screen.css" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\doc.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\email.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\external.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\feed.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\im.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\lock.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\pdf.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\visited.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\icons\xls.png" />
-    <Content Include="Public\stylesheets\plugins\link-icons\readme.txt" />
-    <Content Include="Public\stylesheets\plugins\link-icons\screen.css" />
-    <Content Include="Public\stylesheets\plugins\rtl\readme.txt" />
-    <Content Include="Public\stylesheets\plugins\rtl\screen.css" />
-    <Content Include="Public\stylesheets\print.css" />
-    <Content Include="Public\stylesheets\screen.css" />
-    <Content Include="Public\stylesheets\Site.css" />
+    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -207,53 +115,29 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Public\javascripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Areas\api\Models\" />
-    <Folder Include="Areas\api\Views\Shared\" />
-    <Folder Include="Areas\Reporting\Models\" />
-    <Folder Include="Areas\Reporting\Views\Shared\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\api\Views\Web.config" />
-    <Content Include="Areas\Reporting\Views\Annual\Sales.cshtml" />
-    <Content Include="Areas\Reporting\Views\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Account\ChangePassword.cshtml" />
-    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
-    <Content Include="Views\Account\LogOn.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Productions\Create.cshtml" />
-    <Content Include="Views\Productions\Edit.cshtml" />
-    <Content Include="Views\Productions\Index.cshtml" />
-    <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
-    <Content Include="Views\Shared\_PublicLayout.cshtml" />
-    <Content Include="Views\Vidpub\Index.cshtml" />
-    <Content Include="Views\Vidpub\Productions.cshtml" />
-    <Content Include="NLog.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="packages.config" />
+    <None Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Code\Assets.cshtml" />
-    <Content Include="App_Code\Form.cshtml" />
-    <Content Include="App_Code\Template.cshtml" />
-    <Content Include="App_Code\Templates.cshtml" />
-    <Content Include="App_Code\URL.cshtml" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -272,7 +156,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2460</DevelopmentServerPort>
+          <DevelopmentServerPort>7013</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
