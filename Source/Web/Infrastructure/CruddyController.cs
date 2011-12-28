@@ -35,7 +35,7 @@ namespace Web.Infrastructure {
             }
             return View(result);
         }
-        [RequireAdmin]
+        //[RequireAdmin] //TODO: this will make it not requrired when auth is done put back in 
         [HttpGet]
         public ActionResult Create() {
             return View(_table.Prototype);
@@ -43,7 +43,7 @@ namespace Web.Infrastructure {
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [RequireAdmin]
+        //[RequireAdmin] //TODO: this will make it not requrired when auth is done put back in 
         public virtual ActionResult Create(FormCollection collection) {
             var model = _table.CreateFrom(collection);
             try {
