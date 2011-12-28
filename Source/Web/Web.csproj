@@ -104,6 +104,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="Public\images\agenda.png" />
+    <Content Include="Public\images\camera.png" />
+    <Content Include="Public\images\close.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Public\images\jquery_ui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Public\images\jquery_ui\ui-icons_222222_256x240.png" />
+    <Content Include="Public\images\jquery_ui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Public\images\jquery_ui\ui-icons_454545_256x240.png" />
+    <Content Include="Public\images\jquery_ui\ui-icons_888888_256x240.png" />
+    <Content Include="Public\images\jquery_ui\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Public\images\lead.png" />
+    <Content Include="Public\images\logo.png" />
     <Content Include="Public\javascripts\modernizr-1.7.min.js" />
     <Content Include="Public\stylesheets\forms.css" />
     <Content Include="Public\stylesheets\ie.css" />
@@ -171,7 +190,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Public\images\" />
     <Folder Include="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
