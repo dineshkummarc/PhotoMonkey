@@ -6,7 +6,7 @@ using System.Dynamic;
 using System.Collections.ObjectModel;
 using System.Web.Script.Serialization;
 
-namespace VidPub.Web.Infrastructure {
+namespace  Web.Infrastructure {
     /// <summary>
     /// A nice gift from Dave Ward! Thanks!
     /// </summary>

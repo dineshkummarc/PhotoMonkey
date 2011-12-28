@@ -1,14 +1,14 @@
-[assembly: WebActivator.PreApplicationStartMethod(typeof(VidPub.Web.App_Start.NinjectMVC3), "Start")]
-[assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(VidPub.Web.App_Start.NinjectMVC3), "Stop")]
+[assembly: WebActivator.PreApplicationStartMethod(typeof( Web.App_Start.NinjectMVC3), "Start")]
+[assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof( Web.App_Start.NinjectMVC3), "Stop")]
 
-namespace VidPub.Web.App_Start
+namespace  Web.App_Start
 {
     using System.Reflection;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Mvc;
-    using VidPub.Web.Infrastructure.Logging;
-    using VidPub.Web.Infrastructure;
+    using  Web.Infrastructure.Logging;
+    using  Web.Infrastructure;
 
     public static class NinjectMVC3 
     {

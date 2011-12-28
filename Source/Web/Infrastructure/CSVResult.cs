@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.IO;
 
-namespace VidPub.Web.Infrastructure {
+namespace  Web.Infrastructure {
     public class CSVResult:System.Web.Mvc.FileResult {
         IEnumerable<dynamic> _data;
         public CSVResult(IEnumerable<dynamic> data, string fileName):base("text/csv") {

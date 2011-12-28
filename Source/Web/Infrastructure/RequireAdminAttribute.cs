@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using VidPub.Web.Controllers;
+using  Web.Controllers;
 
-namespace VidPub.Web.Infrastructure {
+namespace  Web.Infrastructure {
     public class RequireAdminAttribute:ActionFilterAttribute {
         public override void OnActionExecuting(ActionExecutingContext filterContext) {
 

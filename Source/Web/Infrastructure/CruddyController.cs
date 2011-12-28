@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using VidPub.Web.Controllers;
+using Web.Controllers;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using System.Dynamic;
 using System.Collections.ObjectModel;
 
-namespace VidPub.Web.Infrastructure {
+namespace Web.Infrastructure {
     public class CruddyController : ApplicationController {
 
         public CruddyController(ITokenHandler tokenStore) : base(tokenStore) { }

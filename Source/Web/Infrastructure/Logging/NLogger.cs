@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using NLog;
 
-namespace VidPub.Web.Infrastructure.Logging {
-    public class NLogger : VidPub.Web.Infrastructure.Logging.ILogger {
+namespace  Web.Infrastructure.Logging {
+    public class NLogger :  Web.Infrastructure.Logging.ILogger {
         Logger _logger;
         public NLogger() {
             _logger = LogManager.GetCurrentClassLogger();
