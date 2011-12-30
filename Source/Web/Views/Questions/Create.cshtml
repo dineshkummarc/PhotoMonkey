@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Question</legend>
+        <p>
+            <label>Name</label>
+            <input type="text" name="Name" value="@Model.Name" />
+        </p>
+        <p>
+            <label>Question</label> 
+            <input type="text" name="Answer" value="@Model.Question" />
+        </p>
+        <p>
+            <label>Answer</label>
+            <input type="text" name="Answer" value="@Model.Answer" />
+        </p>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
