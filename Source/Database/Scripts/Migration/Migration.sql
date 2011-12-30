@@ -1,5 +1,22 @@
 ﻿USE [PhotoMonkey]
 GO
+
+
+ 
+
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[VideoLog]')  AND type IN ( N'U' ) )  DROP TABLE [VideoLog]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Episodes]')  AND type IN ( N'U' ) )  DROP TABLE [Episodes]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Customers_Productions]')  AND type IN ( N'U' ) )  DROP TABLE [Customers_Productions]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Productions]')  AND type IN ( N'U' ) )  DROP TABLE [Productions]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Channels]')  AND type IN ( N'U' ) )  DROP TABLE [Channels]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Subscriptions]')  AND type IN ( N'U' ) )  DROP TABLE [Subscriptions]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Customers]')  AND type IN ( N'U' ) )  DROP TABLE [Customers]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Users]')  AND type IN ( N'U' ) )  DROP TABLE [Users] 
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[OrderItems]')  AND type IN ( N'U' ) )  DROP TABLE [OrderItems]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Orders]')  AND type IN ( N'U' ) )  DROP TABLE [Orders]
+
+
+ 
 /****** Object:  Table [dbo].[VideoLog]    Script Date: 09/26/2011 09:56:52 ******/
 SET ANSI_NULLS ON
 GO
@@ -183,6 +200,11 @@ CREATE TABLE [dbo].[Subscriptions](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+
+
+ 
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Reports_AnnualSales]')   )  DROP Procedure [Reports_AnnualSales]
 /****** Object:  StoredProcedure [dbo].[Reports_AnnualSales]    Script Date: 09/26/2011 09:56:54 ******/
 SET ANSI_NULLS ON
 GO
