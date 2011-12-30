@@ -14,6 +14,26 @@ IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo]
 IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Users]')  AND type IN ( N'U' ) )  DROP TABLE [Users] 
 IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[OrderItems]')  AND type IN ( N'U' ) )  DROP TABLE [OrderItems]
 IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Orders]')  AND type IN ( N'U' ) )  DROP TABLE [Orders]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Questions]')  AND type IN ( N'U' ) )  DROP TABLE [Questions]
+
+
+
+
+
+/****** Object:  Table [dbo].[Questions]    Script Date: 09/26/2011 09:56:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Questions](
+	[ID] [int] IDENTITY(1,1) NOT NULL  PRIMARY KEY  CLUSTERED (	[ID] ASC) ON [PRIMARY],
+	[Question] [nvarchar](255) NOT NULL,
+	[Answer] [nvarchar](50) NULL, 
+	[CreatedAt] [datetime] NULL,
+	[UpdatedAt] [datetime] NULL  
+	) ON [PRIMARY]
+GO
+
 
 
  
@@ -24,7 +44,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[VideoLog](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
-	[Email] [nvarchar](50) unique NOT NULL,
+	[Email] [nvarchar](50)  NOT NULL,
 	[Slug] [nvarchar](50) NOT NULL,
 	[EpisodeNumber] [int] NOT NULL,
 	[FileName] [nvarchar](50) NOT NULL,
@@ -46,7 +66,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Users](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
-	[Email] [nvarchar](255) NOT NULL,
+	[Email] [nvarchar](255) unique NOT NULL,
 	[HashedPassword] [nvarchar](50) NULL,
 	[LastLogin] [datetime] NULL,
 	[CreatedAt] [datetime] NULL,

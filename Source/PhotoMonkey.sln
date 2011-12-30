@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{7D75E14D-8A52-4F33-B998-704BA4CFFE2A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A417FEDB-0915-46B5-99F7-9F3E2167A069}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A8F3DB1-557F-4302-91DC-93565E669583}"
@@ -13,19 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{515A5C42-EA9B-4B05-8A05-0A53ADA1FDDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{689528C5-0A48-4283-8BAE-E34930130558}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Web.vsmdi
+		CategoryFile = PhotoMonkey.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7D75E14D-8A52-4F33-B998-704BA4CFFE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D75E14D-8A52-4F33-B998-704BA4CFFE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D75E14D-8A52-4F33-B998-704BA4CFFE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D75E14D-8A52-4F33-B998-704BA4CFFE2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A417FEDB-0915-46B5-99F7-9F3E2167A069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A417FEDB-0915-46B5-99F7-9F3E2167A069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A417FEDB-0915-46B5-99F7-9F3E2167A069}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,6 +30,10 @@ Global
 		{515A5C42-EA9B-4B05-8A05-0A53ADA1FDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{515A5C42-EA9B-4B05-8A05-0A53ADA1FDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{515A5C42-EA9B-4B05-8A05-0A53ADA1FDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{689528C5-0A48-4283-8BAE-E34930130558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689528C5-0A48-4283-8BAE-E34930130558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689528C5-0A48-4283-8BAE-E34930130558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689528C5-0A48-4283-8BAE-E34930130558}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
