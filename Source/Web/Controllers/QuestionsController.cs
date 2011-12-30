@@ -2,62 +2,75 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Web.Controllers;
 using System.Web.Mvc;
-using System.Web.Script.Serialization;
-using System.Dynamic;
-using System.Collections.ObjectModel;
+using Web.Model;
+using Web.Infrastructure; 
+namespace Web.Controllers{
+    public class QuestionsController : CruddyController {
+        public QuestionsController(ITokenHandler tokenStore):base(tokenStore) {
+            _table = new Questions();
+            ViewBag.Table = _table;
+        }
 
-namespace Web.Infrastructure {
-    public class CruddyController : ApplicationController {
 
-        public CruddyController(ITokenHandler tokenStore) : base(tokenStore) { }
 
-        protected dynamic _table;
         [HttpGet]
-        public virtual ActionResult Index(string query) {
+        public override ActionResult Index(string query)
+        {
             IEnumerable<dynamic> results = null;
-            if (!string.IsNullOrEmpty(query)) {
+            if (!string.IsNullOrEmpty(query))
+            {
                 results = _table.FuzzySearch(query);
-            } else {
+            }
+            else
+            {
                 results = _table.All();
             }
-            if (Request.IsAjaxRequest()) {
+            if (Request.IsAjaxRequest())
+            {
                 return VidpubJSON(results);
             }
             return View(results);
         }
         [HttpGet]
-        public virtual ActionResult Details(int id) {
+        public override ActionResult Details(int id)
+        {
             var result = _table.FindBy(ID: id);
-            if (Request.IsAjaxRequest()) {
+            if (Request.IsAjaxRequest())
+            {
                 return VidpubJSON(result);
             }
             return View(result);
         }
-        [RequireAdmin]
+
         [HttpGet]
-        public virtual ActionResult Create() {
+        public override ActionResult Create()
+        {
             return View(_table.Prototype);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         [RequireAdmin]
-        public virtual ActionResult Create(FormCollection collection) {
+        public override ActionResult Create(FormCollection collection)
+        {
             var model = _table.CreateFrom(collection);
-            try {
+            try
+            {
                 // TODO: Add insert logic here
                 _table.Insert(model);
                 return RedirectToAction("Index");
-            } catch (Exception x) {
+            }
+            catch (Exception x)
+            {
                 TempData["Error"] = "There was a problem adding this record";
                 return View();
             }
         }
         [RequireAdmin]
         [HttpGet]
-        public virtual ActionResult Edit(int id) {
+        public override ActionResult Edit(int id)
+        {
             var model = _table.Get(ID: id);
             model._Table = _table;
             return View(model);
@@ -66,13 +79,17 @@ namespace Web.Infrastructure {
         [HttpPut]
         [ValidateAntiForgeryToken]
         [RequireAdmin]
-        public virtual ActionResult Edit(int id, FormCollection collection) {
+        public override ActionResult Edit(int id, FormCollection collection)
+        {
             var model = _table.CreateFrom(collection);
-            try {
+            try
+            {
                 // TODO: Add update logic here
                 _table.Update(model, id);
                 return RedirectToAction("Index");
-            } catch (Exception x) {
+            }
+            catch (Exception x)
+            {
                 TempData["Error"] = "There was a problem editing this record";
                 return View(model);
             }
@@ -80,18 +97,21 @@ namespace Web.Infrastructure {
 
         [HttpDelete]
         [ValidateAntiForgeryToken]
-        public virtual ActionResult Delete(int id) {
-            try {
+        public override ActionResult Delete(int id)
+        {
+            try
+            {
                 // TODO: Add delete logic here
                 _table.Delete(id);
                 return RedirectToAction("Index");
-            } catch {
+            }
+            catch
+            {
                 TempData["Error"] = "There was a problem deleting this record";
             }
             return RedirectToAction("Index");
         }
 
     }
-
-
 }
+

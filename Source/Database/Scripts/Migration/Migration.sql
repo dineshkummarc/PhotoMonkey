@@ -34,8 +34,9 @@ CREATE TABLE [dbo].[Questions](
 	[UpdatedAt] [datetime] NULL  
 	) ON [PRIMARY]
 GO
-
-
+INSERT INTO  [Questions] ([Name]  ,[Question],[Answer] ) VALUES  ('Question1'  ,'what do zombies like' ,'brains' )
+INSERT INTO  [Questions] ([Name]  ,[Question],[Answer] ) VALUES  ('Question2'  ,'fdasd' ,'asdf' )
+INSERT INTO  [Questions] ([Name]  ,[Question],[Answer] ) VALUES  ('Question3'  ,'asdfa' ,'bbbbb' )
 
  
 /****** Object:  Table [dbo].[VideoLog]    Script Date: 09/26/2011 09:56:52 ******/
