@@ -10,22 +10,11 @@
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     <fieldset>
-        <legend>Question</legend>
-        <p>
-            <label>Name</label>
-            <input type="text" name="Name" value="@Model.Name" />
-        </p>
-        <p>
-            <label>Question</label> 
-            <input type="text" name="Answer" value="@Model.Question" />
-        </p>
-        <p>
-            <label>Answer</label>
-            <input type="text" name="Answer" value="@Model.Answer" />
-        </p>
-        <p>
-            <input type="submit" value="Create" />
-        </p>
+        <legend>Question</legend> 
+        @Form.TextBoxRequired(name: "Name", value: Model.Name) 
+        @Form.TextBoxRequired(name: "Question", value: Model.Question) 
+        @Form.TextBoxRequired(name: "Answer", value: Model.Answer) 
+        @Form.Submit()
     </fieldset>
 }
 

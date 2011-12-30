@@ -15,9 +15,27 @@ IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo]
 IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[OrderItems]')  AND type IN ( N'U' ) )  DROP TABLE [OrderItems]
 IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Orders]')  AND type IN ( N'U' ) )  DROP TABLE [Orders]
 IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Questions]')  AND type IN ( N'U' ) )  DROP TABLE [Questions]
+IF EXISTS ( SELECT  * FROM    sys.objects  WHERE   object_id = OBJECT_ID(N'[dbo].[Coaches]')  AND type IN ( N'U' ) )  DROP TABLE [Coaches]
 
 
 
+/****** Object:  Table [dbo].[Coaches]    Script Date: 09/26/2011 09:56:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Coaches](
+	[ID] [int] IDENTITY(1,1) NOT NULL  PRIMARY KEY  CLUSTERED (	[ID] ASC) ON [PRIMARY],
+	[Name] [nvarchar](50) NULL,  
+	[CreatedAt] [datetime] NULL,
+	[UpdatedAt] [datetime] NULL  
+	) ON [PRIMARY]
+GO
+INSERT INTO  [Coaches] ([Name]   ) VALUES  ('nick'  )
+INSERT INTO  [Coaches] ([Name]   ) VALUES  ('dan'    )
+INSERT INTO  [Coaches] ([Name]   ) VALUES  ('rya'   )
+
+ 
 
 
 /****** Object:  Table [dbo].[Questions]    Script Date: 09/26/2011 09:56:52 ******/

@@ -15,7 +15,7 @@
         <td>@item.Name</td>
         <td>@item.Question</td>
         <td>@item.Answer</td>
-        <td>@Html.ActionLink("Edit","edit",new{id = item.ID}) |  @Html.ActionLink("Delete","delete",new{id = item.ID}) </td>
+        <td>@Html.ActionLink("Edit","edit",new{id = item.ID}) |  @Html.ActionLink("Delete","delete",new{id = item.ID})  |  @Html.ActionLink("Details", "detail", new { id = item.ID }) </td>
     </tr>
 }
 </table>
