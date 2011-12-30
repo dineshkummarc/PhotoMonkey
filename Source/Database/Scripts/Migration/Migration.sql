@@ -27,6 +27,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Questions](
 	[ID] [int] IDENTITY(1,1) NOT NULL  PRIMARY KEY  CLUSTERED (	[ID] ASC) ON [PRIMARY],
+	[Name] [nvarchar](50) NULL, 
 	[Question] [nvarchar](255) NOT NULL,
 	[Answer] [nvarchar](50) NULL, 
 	[CreatedAt] [datetime] NULL,

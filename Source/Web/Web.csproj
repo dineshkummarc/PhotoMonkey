@@ -99,7 +99,6 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EpisodesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductionsController.cs" />
     <Compile Include="Controllers\ShopifyController.cs" />
     <Compile Include="Controllers\VidpubController.cs" />
     <Compile Include="Global.asax.cs">
@@ -254,6 +253,15 @@
     <Content Include="App_Code\Template.cshtml" />
     <Content Include="App_Code\Templates.cshtml" />
     <Content Include="App_Code\URL.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Questions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeTemplates\AddController\Controller.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Create.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Edit.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\List.tt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
